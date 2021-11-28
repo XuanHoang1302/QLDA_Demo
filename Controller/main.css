@@ -1,0 +1,102 @@
+ul{
+    list-style: none;
+}
+
+h4 {
+    align-items: center;
+    padding:12px 16px;
+    border-bottom: 1px solid rgb(0,0, 0,0.1);
+}
+/* img-header */
+.img_admin {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+.banner_img {
+    display: flex;  
+}
+.img {
+    margin: 1rem;
+}
+
+/* search-header */
+.input {
+    width: 90%;
+    height: 40px;
+    outline: none;
+}
+.btn_search {
+    width: 10%;
+    height: 40px;
+    background-color: rgb(153, 173, 173);
+    border-radius: 2px;
+    border: none;
+    outline: none;
+}
+.btn_search:hover {
+    background-color: rgb(106, 122, 122);
+    color: white;
+}
+.banner_input {
+    display: flex;
+    margin: 30px 0px;
+}
+/* logout-header */
+.banner_logout {
+    display: flex;
+    align-items: flex-end;
+}
+.logout {
+    margin: 10px 10px;
+    flex-grow: 1;
+    text-align: right;
+}
+.help {
+    flex-grow:4;
+}
+
+/* body-Danh mục */
+.home-icon {
+    font-size: 20px;
+    margin-right: 8px;
+    position: relative;
+    top: -1px; 
+}
+.home_link {
+    text-decoration:none;
+    display: block;
+    color: rgb(106, 122, 122);
+    padding-top: 8px;
+}
+.home_link:hover {
+    text-decoration:none;
+    color: black;
+}
+/* body-App */
+.tittle {
+    margin-top: 20px;
+}
+.App {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-basis: 100%; */
+    background-color: white;
+    margin-top: 30px;
+}
+.product-inf {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgb(0,0, 0,0.1);
+    padding: 0 5px;
+    height: 300px;
+}
+#content {
+    display: flex;
+    justify-content: space-around;
+}
+.img-link {
+    width: 200px;
+    height: calc(Width*1.5);
+}

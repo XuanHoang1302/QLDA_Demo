@@ -1,0 +1,120 @@
+.status_link {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-size: 20px;
+    }
+    .tittle {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        size: 50px;
+        margin-top: 40px;
+        color: #c4c9cf;
+        cursor: context-menu;
+    }
+    .img {
+        background-position: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+    }
+    .role {
+        color: black;
+        list-style: none;
+        font-size: 1em;
+        text-align: center;
+    }
+    /* category */
+    .category {
+        position: relative;
+        list-style: none;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-around;
+        font-size: 20px;
+    }
+    .link {
+        color: black;
+        list-style: none;
+        text-decoration: none;
+        padding: 10px 2px 10px 0;
+        line-height: 2em;
+    }
+    .link_extra:first-child {
+        border-bottom: 1px solid #c8cacc;
+    }
+    .link_extra {
+        color: black;
+        list-style: none;
+        text-decoration: none;
+        padding: 10px 2px 10px 0;
+    }
+    .link_extra a:hover {
+        list-style: none;
+        text-decoration: none;
+        padding-left: 0;
+    }
+    .link:hover {
+        text-decoration: none;
+        color: #c4c9cf;
+    }
+    .gt {
+        position: absolute;
+        background-color: white;
+        width: 8em;
+        top:40px;
+        display: none;
+        z-index: 2;
+    }
+    .category li:hover .gt {
+        display: block;
+    }
+    /* tra cứu */
+    .book-search {
+        position: absolute;
+        background-color: white;
+        border-radius: 2px;
+        padding-left: 20px;
+        display: none;
+        z-index: 2;
+    }
+    .category li:hover .book-search {
+        display: block;
+    }
+    .title-book .book-name a {
+        display: block;
+        text-decoration: none;
+        color: #000;
+        font-size: 24px;
+        padding: 16px 0;
+    }
+    .status-select  {
+        height: 2.1em;
+        border-radius: 2px;
+    }
+    .book_hover {
+        text-align: center;
+        margin-top: 2em;
+    }
+    .book_item {
+        background-color: white;
+        padding: 1em 0;
+    }
+    .book_item:hover {
+    z-index: 2;
+    box-shadow: 8px 8px 8px 8px rgb(104, 103, 103);
+    }
+    .page {
+        text-align: center;
+        color:black; 
+        width:40px;
+        height:25px;
+        background-color: white;
+    }
+    .comment_header {
+        display: flex;
+        justify-content: space-between;
+    }
