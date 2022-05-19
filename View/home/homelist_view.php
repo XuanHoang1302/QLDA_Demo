@@ -55,29 +55,32 @@ require_once("./model/book_model.php");
                 </div>
 
             </div>
-            <div class="col-sm-3" style="height:200px;">
-                <?php 
-                    if($getStatus == true) {
-                        echo '
-                            <div class="text-center" >
-                            <img class="img" src="'.$User['img'].'" alt="" style="width:100px;border-radius:100%;">
-                            </div>
-                            <div class="text-center">
-                                <h5>Xin chào '.$User['userName'].' </h5>
-                            </div>
-                        ';
-                    }
-                    else {
-                        echo '
-                            <div class="text-center" >
-                            <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc4Gtvgh2N6b1Pw6jNTQoAc0k8cN0FTDnesA&usqp=CAU" alt="" style="width:100px;border-radius:100%;">
-                            </div>
-                            <div class="text-center">
-                                <h5>Chưa đăng nhập </h5>
-                            </div>
-                        ';
-                    }
-                ?>
+
+            <div class="col-sm-3" >
+                <div class="text-center">
+                    <?php 
+                        if($getStatus == true) {
+                            echo '
+                                <div class="text-center" >
+                                <img class="img" src="'.$User['img'].'" alt="" style="width:100px;border-radius:100%;">
+                                </div>
+                                <div class="text-center">
+                                    <h5>Xin chào '.$User['userName'].' </h5>
+                                </div>
+                            ';
+                        }
+                        else {
+                            echo '
+                                <div class="text-center" >
+                                <img class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc4Gtvgh2N6b1Pw6jNTQoAc0k8cN0FTDnesA&usqp=CAU" alt="" style="width:100px;border-radius:100%;">
+                                </div>
+                                <div class="text-center">
+                                    <h5>Chưa đăng nhập </h5>
+                                </div>
+                            ';
+                        }
+                    ?>
+                </div>
                 <div class="status">
                     <div class="text-center" style="margin-bottom:15px ;">
                         <ul class="status_link">

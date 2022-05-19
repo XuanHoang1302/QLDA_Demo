@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once("model/home_model.php");
 require_once("model/entity.php");
 class admin_controller {
@@ -22,8 +23,8 @@ class admin_controller {
         // lấy thông tin người dùng từ cookie
         $getStatus = false;
         //$User = [];
-        if (isset($_COOKIE['token'])) {
-            $getUserName = $_COOKIE['token'];
+        if (isset($_SESSION['token'])) {
+            $getUserName = $_SESSION['token'];
             $User = $this->home_model->getUser($getUserName); 
             $getStatus = true;
             require_once("View/admin/admin_view.php");
@@ -32,6 +33,7 @@ class admin_controller {
             $getStatus = false;
             header("location: index.php?controller=login");
             //$User['userName'] = '';
+            //require_once("View/admin/admin_view.php");
         }      
        // require_once("View/admin/admin_view.php");
     }

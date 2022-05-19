@@ -27,19 +27,20 @@ class index_controller {
         // lấy thông tin người dùng từ cookie
         $getStatus = false;
         $User = [];
-        if (isset($_COOKIE['token'])) {
-            $getUserName = $_COOKIE['token'];
+        if (isset($_SESSION['token'])) {
+            $getUserName = $_SESSION['token'];
             $User = $this->home_model->getUser($getUserName);
             //$this->login_model->InsertOrders($User);
             $getStatus = true;
+            // truy xuất vào sql lấy dl và đưa vào biến home_list
         }
         else {
             $getStatus = false;
             $User['Role'] = 'reader';
-            //header("location: index.php?controller=login");
+            //require_once("View/home/homelist_view.php");
+            // header("location: index.php?controller=login");
         }
-    
-        // truy xuất vào sql lấy dl và đưa vào biến home_list
+        
         $curentPage = filter_input(INPUT_POST,'_page');
         if(empty($curentPage)) {$curentPage=1;}
        
@@ -53,8 +54,8 @@ class index_controller {
     }
 
     function Pay() {
-        if (isset($_COOKIE['token'])) {
-            $getEmail = $_COOKIE['token'];
+        if (isset($_SESSION['token'])) {
+            $getEmail = $_SESSION['token'];
             $this->home_model->Pay($getEmail);
             header("location:index.php");
         }
@@ -80,7 +81,7 @@ class index_controller {
 
     function card() {
         // truy xuất vào sql lấy dl và đưa vào biến home_list
-        if(isset($_COOKIE['token'])) {
+        if(isset($_SESSION['token'])) {
             $id = filter_input(INPUT_POST,'id');
             $quantity = 1;
             $result = $this->home_model->selectId($id);  
@@ -135,7 +136,7 @@ class index_controller {
     }
 
     function save() {
-        $getUserName = $_COOKIE['token'];
+        $getUserName = $_SESSION['token'];
         $User = $this->home_model->getUser($getUserName); 
         $book = $_SESSION['cart'];
         $this->home_model->InsertOrdersBook($User,$book);

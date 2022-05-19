@@ -18,7 +18,8 @@ class login_model extends DB {
         $sql = "insert into status(userId,token) values('$userId','$token')";
         DB::excute($sql);
         // lưu vào cookie
-        setcookie('token',$token,time() + 3 * 60 * 60);
+        //setcookie('token',$token,time() + 3 * 60 * 60);
+        $_SESSION['token'] = $token;
         return $token;
     }
     public function getUser($getEmail) {

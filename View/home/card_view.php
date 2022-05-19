@@ -57,8 +57,7 @@
                 </div>
             </div>
             <div style="display: flex;justify-content:flex-end">
-                <button id="reset" class="btn btn-primary">Quay lại home</button>
-                <button id="Dangky" class="btn btn-primary"  style="margin:0 3em;">Cập nhật danh sách mượn</button>
+                <button id="reset" style="margin-right:2em;" class="btn btn-primary">Quay lại home</button>
                 <a onclick="return confirm('Check email để xem thời gian lấy sách?')" id="Thanhtoan" href="index.php?action=Pay" class="btn btn-primary">Gửi yêu cầu mượn</a>
             </div>
         </div>

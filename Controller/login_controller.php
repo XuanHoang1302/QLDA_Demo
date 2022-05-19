@@ -6,12 +6,13 @@ class login_controller {
     private $login_model;
     function __construct() {
         $this->login_model = new login_model;
-        if (isset($_COOKIE['token'])) {
-            $history = $_COOKIE['token'];
+        if (isset($_SESSION['token'])) {
+            $history = $_SESSION['token'];
             $this->login_model->delHistory($history);
+            session_destroy();
         }
-        setcookie("token", "", time()- 3 * 60 * 60);
-        session_destroy();
+        // setcookie("token", "", time()- 3 * 60 * 60);
+        //session_destroy();
     }
    
     public function run() {

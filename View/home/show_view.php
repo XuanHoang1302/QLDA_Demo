@@ -18,7 +18,7 @@
             <div style="display:flex;justify-content:end;">
                 <button class="reset btn btn-primary" style="margin-right: 1em;">Quay lại</button>
                 <?php
-                            if(!isset($_COOKIE['token'])) {
+                            if(!isset($_SESSION['token'])) {
                                
                                 echo '<a href="index.php?controller=login" class="add btn btn-primary">Thêm vào danh sách mượn</a>';
                             }
